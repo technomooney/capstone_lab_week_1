@@ -37,7 +37,7 @@ def get_valid_alpha_input(prompt):
                 break
     return data # it keeps returning the first input even if i input the right one after. 
 
-
+# process the sentence that is validated in a previous function. this does the actual camelization. 
 def camelize(sentence_to_be_camilized):
     word_list = sentence_to_be_camilized.split()
     camelized_sentence = word_list[0].lower()

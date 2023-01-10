@@ -4,7 +4,7 @@ def main():
     class_list = get_class_list()
     class_list_output(class_list)
 
-
+# just get the classes from the user and add it to a list
 def get_class_list():
     class_list = []
     class_input = "Start"
@@ -15,7 +15,7 @@ def get_class_list():
     class_list.pop()
     return class_list
 
-
+# print it out the list in a table. 
 def class_list_output(class_list):
     for item_num,item in enumerate(class_list):
         print(f"Item {item_num+1:>5}: {item:>20}")
