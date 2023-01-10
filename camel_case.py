@@ -22,20 +22,20 @@ def get_input(prompt="Please enter data: ",validate=False):
 
 
 # validate if there is any chars other then alpha (A-Z and a-z),
-# def get_valid_alpha_input(prompt):
-#     data = input(prompt)
-#     # invalid_char = ["'", '"', "1", "2","3","4","5","6","7","8","9","0","#","+","=",";",":"]
-#     isvalid=False
-#     while not isvalid:
-#         for item in invalid_char:
-#             if item in data:
-#                 print(f"the data entered contains invalid charecters, it cant include the following chars\n"+
-#                 f"{', '.join(invalid_char)}")
-#                 data = input("Try again: "+prompt)
-#             else:
-#                 isvalid=True
-#                 break
-#     return data # it keeps returning the first input even if i input the right one after. 
+def get_valid_alpha_input(prompt):
+    data = input(prompt)
+    # invalid_char = ["'", '"', "1", "2","3","4","5","6","7","8","9","0","#","+","=",";",":"]
+    isvalid=False
+    while not isvalid:
+        for item in invalid_char:
+            if item in data:
+                print(f"the data entered contains invalid charecters, it cant include the following chars\n"+
+                f"{', '.join(invalid_char)}")
+                data = input("Try again: "+prompt)
+            else:
+                isvalid=True
+                break
+    return data # it keeps returning the first input even if i input the right one after. 
 
 
 def camelize(sentence_to_be_camilized):
