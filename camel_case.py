@@ -7,8 +7,12 @@ def banner():
     stars = '*' * len(message)
     print(f'\n{stars}\n{message}\n{stars}\n')
 
+def instructions():
+    print('Enter a centence and this program will convert it to camelcase.')
+
 def main():
     banner()
+    instructions()
     data = get_input("Enter a sentence to convert to camel case: ",False)
     for item in invalid_char:
         if item in data:
