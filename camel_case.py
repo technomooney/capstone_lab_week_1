@@ -1,9 +1,15 @@
 """Marty Mooney, for Capstone class of spring 2023"""
 invalid_char = ["'", '"', "1", "2","3","4","5","6","7","8","9","0","#","+","=",";",":","!","."]
 
+def banner():
+    """ Display Program name """
+    message = 'A sweet camelcase Program!'
+    stars = '*' * len(message)
+    print(f'\n{stars}\n{message}\n{stars}\n')
+
 def main():
-    print("start")
-    data = get_input("Enter a sentence to convert to camel case: ")
+    banner()
+    data = get_input("Enter a sentence to convert to camel case: ",False)
     for item in invalid_char:
         if item in data:
             print(f"\n{'*'*62}\nWarning sentence entered will not make a valid variable name!\n{'*'*62}")
